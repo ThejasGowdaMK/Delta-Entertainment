@@ -26,10 +26,10 @@ d. Table connecting Movie and Actor.
 REST api.
 
 
-1.	HttpGet – “api/Movie/Movies”
+1. HttpGet – “api/Movie/Movies”
 
-It will return all the movies information that is required.
-Sample Output-
+   It will return all the movies information that is required.
+   Sample Output-
     [
     {
         "Release_Date": "2020-04-08T00:00:00",
@@ -81,16 +81,13 @@ Sample Output-
     }
 ]
 
+2. HttpPost - “api/Movie/Movies”
 
 
+   It will insert movie in database, if not already present and returns true. If it is present, it will throw an exception.
 
-2.	HttpPost - “api/Movie/Movies”
-
-
-It will insert movie in database, if not already present and returns true. If it is present, it will throw an exception.
-
-Sample Input 
-Body - {
+ Sample Input 1:
+   Body - {
     "Movie_Name":"Yuvaratna",
     "Release_Date":"12/07/2020",
     "Producer":"Kishore",
@@ -112,16 +109,15 @@ Body - {
     }
 
     Output - "Message": "An error has occurred.",
-    "ExceptionMessage": "Movie is already present in Database",
+             "ExceptionMessage": "Movie is already present in Database",
 
 
 
 
 
-3.	HttpPut – “api/Movie/editMovie” 
+3. HttpPut – “api/Movie/editMovie” 
 
-
-It will edit movie in database if present and returns true. If it is not present it will throw an exception.
+   It will edit movie in database if present and returns true. If it is not present it will throw an exception.
 
 Sample Input 1:
 
@@ -147,4 +143,4 @@ Body –
        }
 
 Output -     "Message": "An error has occurred.",
-    "ExceptionMessage": "Movie is not present in database please verify",
+             "ExceptionMessage": "Movie is not present in database please verify",
